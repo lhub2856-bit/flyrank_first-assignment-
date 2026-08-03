@@ -2,13 +2,13 @@ from fastapi import FastAPI, HTTPException
 from sqlmodel import SQLModel, Field, create_engine, Session, select
 from typing import Optional
 from pydantic import BaseModel
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI()
-
-sqlite_file_name = "tasks.db"
-sqlite_url = f"sqlite:///{sqlite_file_name}"
-
-engine = create_engine(sqlite_url, echo=False)
+DATABASE_URL = os.getenv("DATABASE_URL")
+engine = create_engine(DATABASE_URL, echo=False)
 
 
 class Task(SQLModel, table=True):
