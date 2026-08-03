@@ -41,18 +41,12 @@ flyrank_crudapi/
 ```
 
 ## How to Run
+How to Run
+Copy .env.example to .env and fill in your own values.
+Start the whole stack with docker compose up --build.
+The API will be available at http://127.0.0.1:8000, with interactive docs at /docs.
 
-1. Copy `.env.example` to `.env` and set your own password:
-   ```
-   DATABASE_URL=postgresql://postgres:<your_password_here>@db:5432/myappdb
-   ```
-2. Start the whole stack:
-   ```bash
-   docker compose up --build
-   ```
-3. The API will be available at `http://127.0.0.1:8000`. Interactive docs at `http://127.0.0.1:8000/docs`.
 
-Note: inside `docker-compose.yml`, the app connects to the database using the service name `db` (not `localhost`), since containers on the same Docker network communicate by service name.
 
 ## Database Setup
 
