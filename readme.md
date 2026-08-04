@@ -1,3 +1,4 @@
+Note: This repo contains Assignments 1-3 (progressive project).
 # Task API
 
 A simple CRUD API for managing a to-do list, built with Python, FastAPI, and PostgreSQL.
